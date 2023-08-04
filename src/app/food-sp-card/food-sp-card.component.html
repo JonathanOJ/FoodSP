@@ -1,0 +1,44 @@
+<section
+  style="
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f3f3f3;
+    border-radius: 32px;
+    width: 380px;
+    height: 450px;
+  "
+>
+  <div style="max-height: 240px">
+    <img
+      style="position: relative; left: 45px; top: -100px"
+      [src]="image"
+      alt="imagem"
+    />
+  </div>
+  <div
+    style="
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    <div>
+      <span style="font-weight: 500; font-size: 32px; color: #292929">
+        {{ tittle }}
+      </span>
+    </div>
+    <p
+      style="
+        font-family: Inter;
+        color: #616161;
+        padding: 0 87px;
+        font-size: 18px;
+      "
+    >
+      {{ description }}
+    </p>
+    <span style="font-size: 32px">R$ {{ price }}</span>
+  </div>
+</section>
