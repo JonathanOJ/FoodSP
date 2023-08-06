@@ -1,0 +1,56 @@
+<section
+  style="
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    border-radius: 32px;
+    width: 450px;
+    height: 350px;
+  "
+>
+  <div style="height: 160px">
+    <img
+      style="position: relative; left: 25px; top: 25px"
+      [src]="image"
+      alt="imagem"
+    />
+  </div>
+  <div
+    style="
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 30px;
+    "
+  >
+    <div>
+      <span style="font-weight: 500; font-size: 32px; color: #292929">
+        {{ name }}
+      </span>
+    </div>
+    <p
+      style="
+        font-family: Inter;
+        color: #616161;
+        font-size: 18px;
+        height: 90px;
+        margin: 10px 0 0;
+      "
+    >
+      {{ comment }}
+    </p>
+    <div class="rating">
+      <ng-container *ngFor="let value of [5, 4, 3, 2, 1]">
+        <input
+          type="radio"
+          [name]="'rating_' + id"
+          [value]="value"
+          [disabled]="true"
+          [checked]="value === avaliation"
+        />
+        <label [for]="value + '_' + id"></label>
+      </ng-container>
+    </div>
+  </div>
+</section>

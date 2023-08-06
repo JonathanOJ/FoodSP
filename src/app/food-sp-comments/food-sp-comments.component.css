@@ -1,0 +1,30 @@
+.rating label:before {
+  content: "\2605";
+}
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+.rating > input {
+  display: none;
+}
+.rating > label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  color: #ccc;
+}
+.rating > input:checked ~ label,
+.rating > input:hover ~ label {
+  color: #da2535;
+}
+.rating > input:checked + label:before {
+  content: "\2605";
+}

@@ -48,6 +48,7 @@
         font-size: 24px;
       "
       href="#"
+      (click)="redirect()"
       >Ler mais sobre o modo de preparo
     </a>
   </div>
@@ -82,5 +83,31 @@
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       image="/assets/lamen tipo 3.png"
     ></food-sp-card>
+  </div>
+</section>
+<section>
+  <h1
+    style="
+      font-weight: 600;
+      font-size: 48px;
+      text-align: center;
+      margin: 50px 0 150px;
+    "
+  >
+    Comentários
+  </h1>
+  <div style="display: flex; justify-content: center; gap: 20px">
+    <food-sp-comments
+      name="Daniele Almeida"
+      comment="Ótimo serviço! Encantada com a qualidade dos pratos."
+      [avaliation]="5"
+      image="/assets/img profile 1.png"
+    ></food-sp-comments>
+    <food-sp-comments
+      name="Ricardo França"
+      comment="Não é apenas a comida excelente, o serviço torna a experiência especial."
+      [avaliation]="4"
+      image="/assets/img profile 2.png"
+    ></food-sp-comments>
   </div>
 </section>

@@ -7,6 +7,7 @@ import { FoodSPFooterComponent } from './food-sp-footer/food-sp-footer.component
 import { FoodSPBodyComponent } from './food-sp-body/food-sp-body.component';
 import { FoodSPHeaderComponent } from './food-sp-header/food-sp-header.component';
 import { FoodSPCardComponent } from './food-sp-card/food-sp-card.component';
+import { FoodSPCommentsComponent } from './food-sp-comments/food-sp-comments.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FoodSPCardComponent } from './food-sp-card/food-sp-card.component';
     FoodSPBodyComponent,
     FoodSPHeaderComponent,
     FoodSPCardComponent,
+    FoodSPCommentsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
