@@ -1,8 +1,10 @@
 <section
-  style="display: flex; justify-content: space-evenly; align-items: center"
+  style="display: flex; justify-content: space-between; align-items: center"
 >
   <div style="max-width: 55vh">
-    <h1 style="font-weight: 500; font-size: 48px">Comida Oriental</h1>
+    <h1 style="font-family: 'Montserrat'; font-weight: 600; font-size: 48px">
+      Comida Oriental
+    </h1>
     <p style="font-family: Inter; color: #292929; font-size: 24px">
       A culinária Japonesa é bastante equilibrada, sendo muito rica em peixes
       (ômega 3), vegetais, massas e ingredientes frescos.
@@ -13,7 +15,7 @@
         border: 0px;
         background-color: #da2535;
         border-radius: 10px;
-        padding: 10px 40px;
+        padding: 10px 0;
         margin-top: 15px;
         color: white;
       "
@@ -27,15 +29,13 @@
 </section>
 
 <section
-  style="display: flex; justify-content: space-evenly; align-items: center"
+  style="display: flex; justify-content: space-between; align-items: center"
 >
   <div>
     <img src="/assets/img segurando prato.png" alt="img segurando prato" />
   </div>
   <div style="max-width: 55vh">
-    <h1 style="font-weight: 500; font-size: 48px">
-      Feita de forma Tradicional
-    </h1>
+    <h1 style="font-size: 48px">Feita de forma Tradicional</h1>
     <p style="font-family: Inter; color: #292929; font-size: 24px">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
@@ -59,30 +59,43 @@
       font-weight: 600;
       font-size: 48px;
       text-align: center;
-      margin: 50px 0 150px;
+      margin: 75px 0 150px;
     "
   >
     Mais populares
   </h1>
   <div style="display: flex; justify-content: center; gap: 20px">
-    <food-sp-card
-      price="25,99"
-      tittle="Ramen de Frango"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      image="/assets/lamen tipo 2.png"
-    ></food-sp-card>
-    <food-sp-card
-      price="30"
-      tittle="Ramen Apimentado"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      image="/assets/lamen tipo 1.png"
-    ></food-sp-card>
-    <food-sp-card
-      price="32,90"
-      tittle="Ramen Tradicional"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      image="/assets/lamen tipo 3.png"
-    ></food-sp-card>
+    <ng-container *ngFor="let item of userTopFoods">
+      <food-sp-card
+        [price]="item.price"
+        [tittle]="item.tittle"
+        [description]="item.description"
+        [image]="item.image"
+      ></food-sp-card>
+    </ng-container>
+  </div>
+</section>
+<section>
+  <h1 style="font-weight: 600; font-size: 48px; padding-top: 50px">
+    Comentários
+  </h1>
+  <div
+    style="
+      display: flex;
+      gap: 20px;
+      max-width: 100%;
+      overflow: auto;
+      padding-bottom: 15px;
+    "
+  >
+    <ng-container *ngFor="let value of userComments">
+      <food-sp-comments
+        [name]="value.name"
+        [comment]="value.comment"
+        [avaliation]="value.avaliation"
+        [image]="value.image"
+      ></food-sp-comments>
+    </ng-container>
   </div>
 </section>
 <section>
@@ -90,24 +103,21 @@
     style="
       font-weight: 600;
       font-size: 48px;
-      text-align: center;
-      margin: 50px 0 150px;
+      padding-left: 100px;
+      padding-top: 50px;
     "
   >
-    Comentários
+    Localização
   </h1>
   <div style="display: flex; justify-content: center; gap: 20px">
-    <food-sp-comments
-      name="Daniele Almeida"
-      comment="Ótimo serviço! Encantada com a qualidade dos pratos."
-      [avaliation]="5"
-      image="/assets/img profile 1.png"
-    ></food-sp-comments>
-    <food-sp-comments
-      name="Ricardo França"
-      comment="Não é apenas a comida excelente, o serviço torna a experiência especial."
-      [avaliation]="4"
-      image="/assets/img profile 2.png"
-    ></food-sp-comments>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467690.14386865456!2d-46.92495573160536!3d-23.682063556622076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1691347385880!5m2!1spt-BR!2sbr"
+      width="900"
+      height="400"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 </section>

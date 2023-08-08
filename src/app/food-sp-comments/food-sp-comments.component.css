@@ -28,3 +28,8 @@
 .rating > input:checked + label:before {
   content: "\2605";
 }
+
+span {
+  font-family: "Montserrat";
+  font-weight: 500;
+}

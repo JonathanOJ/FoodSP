@@ -8,9 +8,15 @@
     height: 450px;
   "
 >
-  <div style="max-height: 240px">
+  <div style="max-height: 200px">
     <img
-      style="position: relative; left: 45px; top: -100px"
+      style="
+        position: relative;
+        left: 45px;
+        top: -100px;
+        width: 289px;
+        height: 292px;
+      "
       [src]="image"
       alt="imagem"
     />
@@ -24,21 +30,23 @@
       flex-direction: column;
     "
   >
-    <div>
-      <span style="font-weight: 500; font-size: 32px; color: #292929">
+    <div
+      style="height: 70px; display: flex; text-align: center; padding: 0 15px"
+    >
+      <span
+        style="
+          font-family: 'Montserrat';
+          font-weight: 600;
+          font-size: 32px;
+          color: #292929;
+        "
+      >
         {{ tittle }}
       </span>
     </div>
-    <p
-      style="
-        font-family: Inter;
-        color: #616161;
-        padding: 0 87px;
-        font-size: 18px;
-      "
-    >
+    <p style="font-family: Inter; color: #616161; font-size: 18px; width: 70%">
       {{ description }}
     </p>
-    <span style="font-size: 32px">R$ {{ price }}</span>
+    <span style="font-size: 32px; padding-top: 15px">R$ {{ price }}</span>
   </div>
 </section>

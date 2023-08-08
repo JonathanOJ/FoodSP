@@ -4,13 +4,21 @@
     flex-direction: column;
     background-color: #f3f3f3;
     border-radius: 32px;
-    width: 450px;
+    width: 60vh;
     height: 350px;
+    box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1);
   "
 >
   <div style="height: 160px">
     <img
-      style="position: relative; left: 25px; top: 25px"
+      style="
+        position: relative;
+        width: 120px;
+        height: 120px;
+        left: 25px;
+        top: 25px;
+        border-radius: 100%;
+      "
       [src]="image"
       alt="imagem"
     />
@@ -25,13 +33,20 @@
     "
   >
     <div>
-      <span style="font-weight: 500; font-size: 32px; color: #292929">
+      <span
+        style="
+          font-family: 'Montserrat';
+          font-weight: 600;
+          font-size: 32px;
+          color: #292929;
+        "
+      >
         {{ name }}
       </span>
     </div>
     <p
       style="
-        font-family: Inter;
+        width: 80%;
         color: #616161;
         font-size: 18px;
         height: 90px;
