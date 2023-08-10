@@ -75,21 +75,21 @@ export class FoodSPService {
         tittle: 'Ramen de Frango',
         description:
           'Uma explosão de sabores asiáticos que vai te transportar para as ruas de Tóquio.',
-        image: './assets/lamen tipo 1.png',
+        image: 'assets/lamen tipo 1.png',
       },
       {
         price: '24,99',
         tittle: 'Ramen Apimentado',
         description:
           'Pimenta que ruge e sabor que incendeia - ousadia e calor em cada garfada.',
-        image: './assets/lamen tipo 2.png',
+        image: 'assets/lamen tipo 2.png',
       },
       {
         price: '29,99',
         tittle: 'Ramen Clássico da Casa',
         description:
           'A tradição nunca foi tão deliciosa - experimente o autêntico sabor do Japão.',
-        image: './assets/lamen tipo 3.png',
+        image: 'assets/lamen tipo 3.png',
       },
     ];
 
