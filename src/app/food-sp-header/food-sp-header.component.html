@@ -4,25 +4,28 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+    margin-top: 15px;
   "
 >
-  <div style="font-family: 'Montserrat'; font-weight: 700">
-    <h1 class="mainTittle">Food<span style="color: #da2535">SP</span></h1>
+  <div>
+    <food-sp-logo></food-sp-logo>
   </div>
   <div
     style="
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 40vh;
+      width: 30%;
       color: #292929;
       font-family: 'Inter';
       font-weight: 500;
     "
   >
-    <p class="headerButtons">Início</p>
-    <p class="headerButtons">Cardápio</p>
-    <p class="headerButtons">Sobre</p>
+    <a (click)="navigateToSection('inicio')" class="headerButtons">Início</a>
+    <a (click)="navigateToSection('cardapio')" class="headerButtons"
+      >Cardápio</a
+    >
+    <a (click)="navigateToSection('sobre')" class="headerButtons">Sobre</a>
   </div>
   <div>
     <button class="loginButton">Entrar</button>

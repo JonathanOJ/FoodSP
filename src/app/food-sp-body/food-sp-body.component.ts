@@ -4,6 +4,7 @@ import { UserTopFoods } from '../model/userTopFoods';
 import { FoodSPService } from '../service/food-sp-models.service';
 import { ModalFoodSpBodyComponent } from './modal-food-sp-body/modal-food-sp-body.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FoodSpNavigationService } from '../service/food-sp-navigation.service';
 
 @Component({
   selector: 'food-sp-body',
@@ -17,7 +18,8 @@ export class FoodSPBodyComponent implements OnInit {
   userEndereco: string = 'Rua 1, 123 - São Paulo - SP';
   constructor(
     private foodSPService: FoodSPService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private navigationService: FoodSpNavigationService
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +27,13 @@ export class FoodSPBodyComponent implements OnInit {
     this.userTopFoods = this.foodSPService.getTopFoods();
 
     this.userSubComments = this.userAllComments.slice(0, 2);
+
+    this.navigationService.sectionChanged$.subscribe((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   }
 
   redirect() {

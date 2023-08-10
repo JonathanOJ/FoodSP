@@ -13,6 +13,7 @@ import { ModalFoodSpBodyComponent } from './food-sp-body/modal-food-sp-body/moda
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { FoodSpLogoComponent } from './food-sp-logo/food-sp-logo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     FoodSPCardComponent,
     FoodSPCommentsComponent,
     ModalFoodSpBodyComponent,
+    FoodSpLogoComponent,
   ],
   imports: [
     BrowserModule,
