@@ -1,47 +1,12 @@
-<section
-  style="
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    background-color: #f3f3f3;
-    border-radius: 32px;
-    width: 380px;
-    height: 450px;
-  "
->
+<section class="cardBody">
   <div style="max-height: 200px">
-    <img
-      style="
-        position: relative;
-        left: 45px;
-        top: -100px;
-        width: 289px;
-        height: 292px;
-      "
-      [src]="image"
-      alt="imagem"
-    />
+    <img class="cardImage" [src]="image" alt="imagem" />
   </div>
-  <div
-    style="
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    "
-  >
+  <div class="cardContent">
     <div
       style="height: 70px; display: flex; text-align: center; padding: 0 15px"
     >
-      <span
-        style="
-          font-family: 'Montserrat';
-          font-weight: 600;
-          font-size: 32px;
-          color: #292929;
-          line-height: 28px;
-        "
-      >
+      <span class="cardTittle">
         {{ tittle }}
       </span>
     </div>

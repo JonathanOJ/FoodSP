@@ -32,3 +32,20 @@ span {
   font-family: "Montserrat";
   font-weight: 500;
 }
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 32px;
+  width: 100%;
+  box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 30px;
+}

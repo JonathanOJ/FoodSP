@@ -1,26 +1,8 @@
-<header
-  style="
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
-    margin-top: 15px;
-  "
->
+<header class="header">
   <div>
     <food-sp-logo></food-sp-logo>
   </div>
-  <div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 30%;
-      color: #292929;
-      font-family: 'Inter';
-      font-weight: 500;
-    "
-  >
+  <div class="headerButtonsContainer">
     <a (click)="navigateToSection('inicio')" class="headerButtons">Início</a>
     <a (click)="navigateToSection('cardapio')" class="headerButtons"
       >Cardápio</a

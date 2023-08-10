@@ -24,3 +24,21 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 60px;
+  margin-top: 15px;
+}
+
+.headerButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  color: #292929;
+  font-family: "Inter";
+  font-weight: 500;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserComments } from 'src/app/model/userComments';
 
 @Component({
@@ -10,6 +11,8 @@ export class ModalFoodSpBodyComponent {
   visible: boolean = false;
   userComments: UserComments[] = [];
 
+  constructor(private activeModal: NgbActiveModal) {}
+
   init(visible: boolean) {
     this.visible = visible;
   }
@@ -20,5 +23,6 @@ export class ModalFoodSpBodyComponent {
 
   show() {
     this.visible = !this.visible;
+    this.activeModal.close();
   }
 }

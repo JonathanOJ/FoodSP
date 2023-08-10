@@ -1,14 +1,4 @@
-<section
-  style="
-    display: flex;
-    flex-direction: column;
-    background-color: #f3f3f3;
-    border-radius: 32px;
-    width: 100%;
-    box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1);
-  "
-  [style.height]="heightSection"
->
+<section class="cardBody" [style.height]="heightSection">
   <div style="height: 160px">
     <img
       style="position: relative; left: 25px; top: 25px; border-radius: 100%"
@@ -18,15 +8,7 @@
       alt="imagem"
     />
   </div>
-  <div
-    style="
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      padding-left: 30px;
-    "
-  >
+  <div class="cardContent">
     <div>
       <span
         style="font-family: 'Montserrat'; font-weight: 600; color: #292929"
