@@ -1,0 +1,57 @@
+<ng-container *ngIf="visible">
+  <div (click)="show()" class="modal-overlay"></div>
+
+  <div class="modal-body">
+    <header
+      style="
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #c9c9c9;
+        padding: 15px;
+        font-size: 24px;
+      "
+    >
+      Sessão de Comentários
+      <span
+        style="
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          font-size: 13px;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #c9c9c9;
+          border-radius: 100%;
+        "
+        (click)="show()"
+        >X</span
+      >
+    </header>
+    <body
+      style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-height: 100%;
+        overflow-x: scroll;
+        padding: 15px;
+        gap: 15px;
+      "
+    >
+      <ng-container *ngFor="let comment of userComments">
+        <food-sp-comments
+          [name]="comment.name"
+          [comment]="comment.comment"
+          [avaliation]="comment.avaliation"
+          [image]="comment.image"
+          heightSection="250px"
+          widthImg="75px"
+          heightImg="75px"
+          sizeName="24px"
+          heightComment="70px"
+          sizeComment="16px"
+          sizeAvaliation="20px"
+        ></food-sp-comments>
+      </ng-container>
+    </body>
+  </div>
+</ng-container>

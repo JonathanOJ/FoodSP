@@ -76,19 +76,21 @@
   </div>
 </section>
 <section>
-  <h1 style="font-weight: 600; font-size: 48px; padding-top: 50px">
-    Comentários
-  </h1>
+  <div style="display: flex; justify-content: space-between">
+    <h1 style="font-weight: 600; font-size: 48px; padding-top: 50px">
+      Comentários
+    </h1>
+    <span class="allComments" (click)="viewAllComments()">Ver todos</span>
+  </div>
   <div
     style="
-      display: flex;
+      display: grid;
       gap: 20px;
-      max-width: 100%;
-      overflow: auto;
+      grid-template-columns: 1fr 1fr;
       padding-bottom: 15px;
     "
   >
-    <ng-container *ngFor="let value of userComments">
+    <ng-container *ngFor="let value of userSubComments">
       <food-sp-comments
         [name]="value.name"
         [comment]="value.comment"
@@ -99,20 +101,13 @@
   </div>
 </section>
 <section>
-  <h1
-    style="
-      font-weight: 600;
-      font-size: 48px;
-      padding-left: 100px;
-      padding-top: 50px;
-    "
-  >
+  <h1 style="font-weight: 600; font-size: 48px; padding-top: 50px">
     Localização
   </h1>
   <div style="display: flex; justify-content: center; gap: 20px">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467690.14386865456!2d-46.92495573160536!3d-23.682063556622076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1691347385880!5m2!1spt-BR!2sbr"
-      width="900"
+      width="1500"
       height="400"
       style="border: 0"
       allowfullscreen=""

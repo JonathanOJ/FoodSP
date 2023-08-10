@@ -4,21 +4,16 @@
     flex-direction: column;
     background-color: #f3f3f3;
     border-radius: 32px;
-    width: 60vh;
-    height: 350px;
+    width: 100%;
     box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1);
   "
+  [style.height]="heightSection"
 >
   <div style="height: 160px">
     <img
-      style="
-        position: relative;
-        width: 120px;
-        height: 120px;
-        left: 25px;
-        top: 25px;
-        border-radius: 100%;
-      "
+      style="position: relative; left: 25px; top: 25px; border-radius: 100%"
+      [style.width]="widthImg"
+      [style.height]="heightImg"
       [src]="image"
       alt="imagem"
     />
@@ -34,24 +29,16 @@
   >
     <div>
       <span
-        style="
-          font-family: 'Montserrat';
-          font-weight: 600;
-          font-size: 32px;
-          color: #292929;
-        "
+        style="font-family: 'Montserrat'; font-weight: 600; color: #292929"
+        [style.font-size]="sizeName"
       >
         {{ name }}
       </span>
     </div>
     <p
-      style="
-        width: 80%;
-        color: #616161;
-        font-size: 18px;
-        height: 90px;
-        margin: 10px 0 0;
-      "
+      style="width: 80%; color: #616161; margin: 10px 0 0"
+      [style.height]="heightComment"
+      [style.font-size]="sizeComment"
     >
       {{ comment }}
     </p>
@@ -64,7 +51,10 @@
           [disabled]="true"
           [checked]="value === avaliation"
         />
-        <label [for]="value + '_' + id"></label>
+        <label
+          [style.font-size]="sizeAvaliation"
+          [for]="value + '_' + id"
+        ></label>
       </ng-container>
     </div>
   </div>

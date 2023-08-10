@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +8,9 @@ import { FoodSPBodyComponent } from './food-sp-body/food-sp-body.component';
 import { FoodSPHeaderComponent } from './food-sp-header/food-sp-header.component';
 import { FoodSPCardComponent } from './food-sp-card/food-sp-card.component';
 import { FoodSPCommentsComponent } from './food-sp-comments/food-sp-comments.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalFoodSpBodyComponent } from './food-sp-body/modal-food-sp-body/modal-food-sp-body.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,14 @@ import { FoodSPCommentsComponent } from './food-sp-comments/food-sp-comments.com
     FoodSPHeaderComponent,
     FoodSPCardComponent,
     FoodSPCommentsComponent,
+    ModalFoodSpBodyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
