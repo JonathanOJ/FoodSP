@@ -14,6 +14,7 @@ export class FoodSPBodyComponent implements OnInit {
   userAllComments: UserComments[] = [];
   userSubComments: UserComments[] = [];
   userTopFoods: UserTopFoods[] = [];
+  userEndereco: string = 'Rua 1, 123 - São Paulo - SP';
   constructor(
     private foodSPService: FoodSPService,
     private modalService: NgbModal
@@ -31,6 +32,10 @@ export class FoodSPBodyComponent implements OnInit {
       'https://www.cajumangaba.com.br/post/jjajangmyeon-%EC%A7%9C%EC%9E%90%EB%A9%B4',
       '_blank'
     );
+  }
+
+  redirectMaps(endereco: string) {
+    window.open('https://www.google.com/maps/place/' + endereco, '_blank');
   }
 
   viewAllComments() {

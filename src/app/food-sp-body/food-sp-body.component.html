@@ -2,26 +2,12 @@
   style="display: flex; justify-content: space-between; align-items: center"
 >
   <div style="max-width: 55vh">
-    <h1 style="font-family: 'Montserrat'; font-weight: 600; font-size: 48px">
-      Comida Oriental
-    </h1>
-    <p style="font-family: Inter; color: #292929; font-size: 24px">
+    <h1 class="tittleSection">Comida Oriental</h1>
+    <p class="descriptionText">
       A culinária Japonesa é bastante equilibrada, sendo muito rica em peixes
       (ômega 3), vegetais, massas e ingredientes frescos.
     </p>
-    <button
-      style="
-        width: 200px;
-        border: 0px;
-        background-color: #da2535;
-        border-radius: 10px;
-        padding: 10px 0;
-        margin-top: 15px;
-        color: white;
-      "
-    >
-      Cardápio
-    </button>
+    <button class="cardapioButton">Cardápio</button>
   </div>
   <div>
     <img src="/assets/kisspng-sushi-japanese.png" alt="Comida Oriental" />
@@ -35,8 +21,8 @@
     <img src="/assets/img segurando prato.png" alt="img segurando prato" />
   </div>
   <div style="max-width: 55vh">
-    <h1 style="font-size: 48px">Feita de forma Tradicional</h1>
-    <p style="font-family: Inter; color: #292929; font-size: 24px">
+    <h1 class="tittleSection">Feita de forma Tradicional</h1>
+    <p class="descriptionText">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
     </p>
@@ -77,9 +63,7 @@
 </section>
 <section>
   <div style="display: flex; justify-content: space-between">
-    <h1 style="font-weight: 600; font-size: 48px; padding-top: 50px">
-      Comentários
-    </h1>
+    <h1 class="tittleSection" style="padding-top: 50px">Comentários</h1>
     <span class="allComments" (click)="viewAllComments()">Ver todos</span>
   </div>
   <div
@@ -101,9 +85,7 @@
   </div>
 </section>
 <section>
-  <h1 style="font-weight: 600; font-size: 48px; padding-top: 50px">
-    Localização
-  </h1>
+  <h1 class="tittleSection" style="padding-top: 50px">Localização</h1>
   <div style="display: flex; justify-content: center; gap: 20px">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467690.14386865456!2d-46.92495573160536!3d-23.682063556622076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1691347385880!5m2!1spt-BR!2sbr"
@@ -114,5 +96,36 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
+  </div>
+  <div
+    style="
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 35px;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        width: 40%;
+        height: 50px;
+        border: 1px solid #292929;
+        border-radius: 10px 0 0 10px;
+      "
+    >
+      <mat-icon svgIcon="map-marker-outline" class="iconSearch"></mat-icon>
+      <input
+        class="inputSearch"
+        type="text"
+        [(ngModel)]="userEndereco"
+        placeholder="Digite seu endereço"
+      />
+    </div>
+    <button class="buttonSearch" (click)="redirectMaps(userEndereco)">
+      Buscar
+    </button>
   </div>
 </section>

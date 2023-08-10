@@ -11,6 +11,8 @@ import { FoodSPCommentsComponent } from './food-sp-comments/food-sp-comments.com
 import { HttpClientModule } from '@angular/common/http';
 import { ModalFoodSpBodyComponent } from './food-sp-body/modal-food-sp-body/modal-food-sp-body.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatIconModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(
+    private sanitizer: DomSanitizer,
+    private matIconRegistry: MatIconRegistry
+  ) {
+    matIconRegistry.addSvgIconSet(
+      sanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')
+    );
+  }
+}

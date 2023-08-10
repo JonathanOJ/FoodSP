@@ -1,0 +1,26 @@
+.loginButton {
+  cursor: pointer;
+  width: 145px;
+  height: 35px;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  background-color: white;
+  font-family: "Inter";
+  font-weight: 600;
+}
+.loginButton:active {
+  background-color: #da2535;
+  color: #fff;
+  transform: scale(0.95);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.24);
+  transition: all 0.1s ease-in-out;
+}
+
+.headerButtons:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.mainTittle:hover {
+  cursor: pointer;
+}

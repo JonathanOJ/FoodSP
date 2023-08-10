@@ -33,3 +33,67 @@ a {
   color: #ff0000;
   cursor: pointer;
 }
+
+.cardapioButton {
+  width: 200px;
+  border: 0px;
+  background-color: #da2535;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.cardapioButton:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.24);
+  transition: all 0.1s ease-in-out;
+}
+
+.descriptionText {
+  font-family: Inter;
+  color: #292929;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.tittleSection {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 42px;
+}
+
+.buttonSearch {
+  height: 52px;
+  width: 100px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  background-color: #da2535;
+  color: white;
+  font-size: 16px;
+  font-family: inter;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.iconSearch {
+  width: 30px;
+  height: 30px;
+  color: #da2535;
+  margin: 10px;
+  margin-right: 5px;
+}
+
+.inputSearch {
+  border: none;
+  font-family: inter;
+  font-weight: 400;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.inputSearch:focus {
+  outline: none;
+}
